@@ -2,9 +2,7 @@
 
 [![pipeline status](https://gitlab.com/ianrobrien/computing-fundamentals-python/badges/master/pipeline.svg)](https://gitlab.com/ianrobrien/computing-fundamentals-python/commits/master)
 [![coverage report](https://gitlab.com/ianrobrien/computing-fundamentals-python/badges/master/coverage.svg)](https://ianrobrien.gitlab.io/computing-fundamentals-python/coverage/index.html)
-[![doxygen]
-(https://img.shields.io/badge/doxygen-reference-blue.svg)]
-(https://ianrobrien.gitlab.io/computing-fundamentals-python)
+[![doxygen](https://img.shields.io/badge/doxygen-reference-blue.svg)](https://ianrobrien.gitlab.io/computing-fundamentals-python)
 
 ## About
 
