@@ -6,7 +6,7 @@ class CollectionsTest(TestCase):
 
     @classmethod
     def test_linkedlist_node(cls):
-        node = collections.LinkedList().Node(100)
+        node = collections.LinkedList()._Node_(100)
         assert node.next == None
         assert node.value == 100
 
@@ -30,3 +30,22 @@ class CollectionsTest(TestCase):
         linkedlist.remove(20)
         assert not linkedlist.contains(20)
         assert linkedlist.size == 2
+
+    @classmethod
+    def test_binarysearchtree(cls):
+        bst = collections.BinarySearchTree()
+        assert bst.size == 0
+        assert bst.is_empty()
+
+        bst.add(50)
+        bst.add(25)
+        bst.add(100)
+        bst.add(150)
+        bst.add(125)
+
+        assert bst.size == 5
+        assert bst.contains(50)
+        assert bst.contains(25)
+        assert bst.contains(100)
+        assert bst.contains(150)
+        assert bst.contains(125)
