@@ -63,17 +63,17 @@ class BinarySearchTree:
         if self.root == None:
             self.root = self._Node_(value)
         else:
-            def add_rec(_Node_, value):
-                if value < _Node_.value:
-                    if _Node_.left == None:
-                        _Node_.left = self._Node_(value)
+            def add_rec(node, value):
+                if value < node.value:
+                    if node.left == None:
+                        node.left = self._Node_(value)
                     else:
-                        add_rec(_Node_.left, value)
+                        add_rec(node.left, value)
                 else:
-                    if _Node_.right == None:
-                        _Node_.right = self._Node_(value)
+                    if node.right == None:
+                        node.right = self._Node_(value)
                     else:
-                        add_rec(_Node_.right, value)
+                        add_rec(node.right, value)
             add_rec(self.root, value)
         # Values can always be added to a collection
         self.size = self.size + 1
@@ -85,14 +85,14 @@ class BinarySearchTree:
         if self.root.value == value:
             return True
 
-        def contains_rec(_Node_, value):
-            if _Node_ == None:
+        def contains_rec(node, value):
+            if node == None:
                 return False
-            if _Node_.value == value:
+            if node.value == value:
                 return True
-            if value < _Node_.value:
-                return contains_rec(_Node_.left, value)
+            if value < node.value:
+                return contains_rec(node.left, value)
             else:
-                return contains_rec(_Node_.right, value)
+                return contains_rec(node.right, value)
 
         return contains_rec(self.root, value)

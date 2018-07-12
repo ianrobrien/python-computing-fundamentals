@@ -12,17 +12,13 @@ def is_odd(integer):
 def factorial(integer):
     if integer < 0:
         raise ValueError("Factorial is undefined for a negative number")
-    if integer <= 1:
-        return 1
-    return integer * factorial(integer - 1)
+    return 1 if integer <= 1 else integer * factorial(integer - 1)
 
 
 def fibonacci(n):
     if n < 0:
         raise ValueError("Cannot return negatively indexed elements")
-    if n <= 1:
-        return 1
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    return 1 if n <= 1 else fibonacci(n - 1) + fibonacci(n - 2)
 
 
 def fibonacci_sequence(n):
