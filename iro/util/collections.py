@@ -16,12 +16,14 @@ class LinkedList:
             while (next.next is not None):
                 next = next.next
             next.next = self._Node_(value)
+        # Values can always be added to a collection
         self.size = self.size + 1
 
     def remove(self, value):
         if self.root is not None:
             if self.root.value == value:
                 self.root = self.root.next
+                self.size = self.size - 1
             else:
                 next = self.root
                 while next.next is not None:
@@ -73,9 +75,11 @@ class BinarySearchTree:
                     else:
                         add_rec(_Node_.right, value)
             add_rec(self.root, value)
+        # Values can always be added to a collection
         self.size = self.size + 1
 
     def contains(self, value):
+        # Handle root cases
         if self.root == None:
             return False
         if self.root.value == value:
