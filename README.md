@@ -1,7 +1,7 @@
 # python-computing fundamentals
 
 [![pipeline status](https://gitlab.com/ianrobrien/computing-fundamentals-python/badges/master/pipeline.svg)](https://gitlab.com/ianrobrien/computing-fundamentals-python/commits/master)
-[![coverage report](https://gitlab.com/ianrobrien/computing-fundamentals-python/badges/master/coverage.svg)]
+[![coverage report](https://gitlab.com/ianrobrien/computing-fundamentals-python/badges/master/coverage.svg)
 
 ## About
 
