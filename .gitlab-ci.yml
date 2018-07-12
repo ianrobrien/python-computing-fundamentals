@@ -3,6 +3,6 @@ image: python:3.7
 test:
   script:
     - apt update && apt install -y python3-pip
-    - /usr/bin/python3 -m pip install -U pip
-    - /usr/bin/python3 -m pip install -U pytest
+    - /usr/bin/python3 -m pip install pip
+    - /usr/bin/python3 -m pip install pytest
     - python3 -m pytest ./tests/
