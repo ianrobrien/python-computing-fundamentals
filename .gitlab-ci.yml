@@ -2,4 +2,5 @@ image: python:3.7
 
 test:
   script:
+    - /usr/bin/python3 -m pip install -U pytest
     - python3 -m pytest ./tests/
