@@ -5,7 +5,7 @@ stages:
   - deploy
 
 pytest:
-  coverage: '/TOTAL[\s|\d]+(\d+.?\d+%)'
+  coverage: '/TOTAL[\s|\d]+(\d+.?\d+%)/'
   script:
     - apt update && apt install -y python3-pip
     - python3 -m pip install pip pytest pytest-cov
