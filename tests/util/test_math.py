@@ -38,4 +38,13 @@ class MathTest(TestCase):
         assert math.fibonacci(3) == 3
         assert math.fibonacci(4) == 5
         assert math.fibonacci(5) == 8
-        
+
+    @classmethod
+    def test_fibonacci_sequence(cls):
+        with cls.assertRaises(cls, ValueError):
+            list(math.fibonacci_sequence(-10))
+        for test_size in (0, 10):
+            result = list(math.fibonacci_sequence(test_size))
+            assert test_size == len(result)
+            for i in range(0, test_size):
+                assert math.fibonacci(i) == result[i]
