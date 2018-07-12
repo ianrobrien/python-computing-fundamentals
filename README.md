@@ -1,8 +1,7 @@
 # python-computing fundamentals
 
 [![pipeline status](https://gitlab.com/ianrobrien/computing-fundamentals-python/badges/master/pipeline.svg)](https://gitlab.com/ianrobrien/computing-fundamentals-python/commits/master)
-[![coverage report](https://gitlab.com/ianrobrien/computing-fundamentals-python/badges/master/coverage.svg)](https://ianrobrien.gitlab.io/computing-fundamentals-python/coverage/index.html)
-[![doxygen](https://img.shields.io/badge/doxygen-reference-blue.svg)](https://ianrobrien.gitlab.io/computing-fundamentals-python)
+[![coverage report](https://gitlab.com/ianrobrien/computing-fundamentals-python/badges/master/coverage.svg)]
 
 ## About
 
@@ -11,13 +10,9 @@ This is a small project I created in order to teach myself Python. It will be im
 ## Abstract Data Types
 
 * LinkedList
-* BinarySearchTree
-* Trie
-* HashTable
 
 ## Algorithms
 
-* Sorting
 * Mathematics and Recursion
 
 ## License
