@@ -17,22 +17,19 @@ class CollectionsTest(TestCase):
         assert linkedlist.is_empty()
 
         linkedlist.add(10)
-        assert linkedlist.size == 1
         linkedlist.add(20)
-        assert linkedlist.size == 2
         linkedlist.add(30)
-        assert linkedlist.size == 3
+        linkedlist.add(40)
 
-        assert not linkedlist.contains(100)
+        assert linkedlist.size == 4
         assert linkedlist.contains(20)
         assert not linkedlist.is_empty()
+        assert not linkedlist.contains(100)
 
+        linkedlist.remove(40)
         linkedlist.remove(20)
         linkedlist.remove(10)
         linkedlist.remove(30)
-        assert not linkedlist.contains(10)
-        assert not linkedlist.contains(20)
-        assert not linkedlist.contains(30)
         assert linkedlist.size == 0
 
     @classmethod
@@ -43,6 +40,7 @@ class CollectionsTest(TestCase):
         assert not bst.contains(0)
 
         bst.add(50)
+        assert not bst.contains(0)
         bst.add(25)
         bst.add(100)
         bst.add(150)
