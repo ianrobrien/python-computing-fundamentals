@@ -2,5 +2,7 @@ image: python:3.7
 
 test:
   script:
+    - sudo apt update && sudo apt install python3-pip
+    - /usr/bin/python3 -m pip install -U pip
     - /usr/bin/python3 -m pip install -U pytest
     - python3 -m pytest ./tests/
