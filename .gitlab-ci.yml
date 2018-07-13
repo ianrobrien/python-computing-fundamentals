@@ -9,7 +9,7 @@ pytest:
   script:
     - apt update && apt install -y python3-pip
     - python3 -m pip install pip pytest pytest-cov
-    - python3 -m pytest --cov=sr
+    - python3 -m pytest --cov=src
     - python3 -m pytest --cov=src --cov-report html
   artifacts:
     paths:
