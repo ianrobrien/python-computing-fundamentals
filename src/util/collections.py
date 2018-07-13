@@ -112,3 +112,40 @@ class BinarySearchTree:
                 return contains_rec(node.right, value)
 
         return contains_rec(self.root, value)
+
+
+class Trie:
+    class _Node_:
+        def __init__(self):
+            self.children = {}
+            self.value = None
+
+    def __init__(self):
+        self.size = 0
+        self.root = self._Node_()
+
+    def insert(self, value):
+        node = self.root
+        index_last_char = None
+        for index_char, char in enumerate(value):
+            if char in node.children:
+                node = node.children[char]
+            else:
+                index_last_char = index_char
+                break
+        if index_last_char is not None:
+            for char in value[index_last_char:]:
+                node.children[char] = self._Node_()
+                node = node.children[char]
+
+        node.value = value
+        self.size += 1
+
+    def find(self, value):
+        node = self.root
+        for char in value:
+            if char in node.children:
+                node = node.children[char]
+            else:
+                return None
+        return node.value

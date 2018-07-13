@@ -69,3 +69,15 @@ class CollectionsTest(TestCase):
         assert bst.contains(150)
         assert bst.contains(125)
         assert bst.contains(12)
+
+    @classmethod
+    def test_trie(cls):
+        trie = collections.Trie()
+        assert trie.size == 0
+
+        trie.insert("hello")
+        trie.insert("houses")
+        trie.insert("hopes")
+
+        assert trie.find("yikes") is None
+        assert trie.find("hello") is not None
