@@ -1,3 +1,19 @@
+# Copyright (c) 2018-present, Ian R. O'Brien
+#
+# Licensed under the MIT License (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://opensource.org/licenses/MIT
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+##############################################################################
+
+
 class LinkedList:
     class _Node_:
         def __init__(self, value, next=None):
@@ -17,19 +33,19 @@ class LinkedList:
                 next = next.next
             next.next = self._Node_(value)
         # Values can always be added to a collection
-        self.size = self.size + 1
+        self.size += 1
 
     def remove(self, value):
         if self.root is not None:
             if self.root.value == value:
                 self.root = self.root.next
-                self.size = self.size - 1
+                self.size -= 1
             else:
                 next = self.root
                 while next.next is not None:
                     if next.next.value == value:
                         next.next = next.next.next
-                        self.size = self.size - 1
+                        self.size -= 1
                         return
                     next = next.next
 
@@ -76,7 +92,7 @@ class BinarySearchTree:
                         add_rec(node.right, value)
             add_rec(self.root, value)
         # Values can always be added to a collection
-        self.size = self.size + 1
+        self.size += 1
 
     def contains(self, value):
         # Handle root cases
