@@ -19,5 +19,5 @@ from unittest import TestCase
 class CurrencyTest(TestCase):
     @classmethod
     def test_get_quote(cls):
-        quote = currency.get_quote("UsD", "NOK")
+        quote = currency.get_quote("usd", "NOK")
         assert quote > 7 and quote < 9
