@@ -16,8 +16,12 @@
 import json
 import requests
 
+api_currency_converter = 'https://free.currencyconverterapi.com/api/v6'
+
 
 def get_quote(base, quote):
-    request = f'https://free.currencyconverterapi.com/api/v6/convert?q={base}_{quote}&compact=ultra'
+    b = base.upper()
+    q = quote.upper()
+    request = f'{api_currency_converter}/convert?q={b}_{q}&compact=ultra'
     response = requests.get(request).json()
-    return response[f'{base.upper()}_{quote.upper()}']
+    return response[f'{b}_{q}']
