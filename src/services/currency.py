@@ -20,8 +20,10 @@ api_currency_converter = 'https://free.currencyconverterapi.com/api/v6'
 
 
 def get_quote(base, quote):
+    if base is None or quote is None:
+        raise ValueError
     b = base.upper()
     q = quote.upper()
-    request = f'{api_currency_converter}/convert?q={b}_{q}&compact=ultra'
-    response = requests.get(request).json()
+    request_url = f'{api_currency_converter}/convert?q={b}_{q}&compact=ultra'
+    response = requests.get(request_url).json()
     return response[f'{b}_{q}']
