@@ -106,10 +106,7 @@ class BinarySearchTree:
                 return False
             if node.value == value:
                 return True
-            if value < node.value:
-                return contains_rec(node.left, value)
-            else:
-                return contains_rec(node.right, value)
+            return contains_rec(node.left, value) if value < node.value else contains_rec(node.right, value)
 
         return contains_rec(self.root, value)
 
